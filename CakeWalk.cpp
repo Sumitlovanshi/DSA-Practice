@@ -7,21 +7,18 @@ int main(){
 	{
         string s;
         cin>>s;
-        map<int,char> c;
-        // unordered_set<char> c;
-        int n=s.size();
+        int a[26] = {0};
+        int n = s.size();
         for(int i=0;i<n;i++){
-            if(m[i]==0){
-                m[i].insert(s[i]);
-                m[i]++;
+            if(a[ int(s[i]) - 'a'] == 0){
+                // m[i].insert(s[i]);
+                cout<<s[i];
+                // m[i]++;
+                a[s[i] - 'a']++;
             }
+            
         }
-        set<char> ::iterator itr;
-        for (itr = c.begin(); itr != c.end(); itr++)
-    {
-        cout << *itr<<" ";
-    }
-        // cout<<n<<endl;
+        cout<<endl;
     }
     return 0;
     }
