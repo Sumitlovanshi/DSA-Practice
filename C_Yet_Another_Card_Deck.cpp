@@ -4,25 +4,13 @@ using namespace std;
 int main(){
 	int n,q;
     cin>>n>>q;
-    int arr[n];\
-    deque<int> dq;
+    int arr[n];
+    map<int, int> m;
     for(int i=0;i<n;i++){
-        int a;
-        cin>>a;
-        dq.push_back(a);
-    }
-    while(q--){
-        // dq<int> :: iterator it;
-        int w;
-        cin>>w;
-        // std::deque<int> it = find(dq.begin(),dq.end(),w);
-        deque<int>::iterator it = find(dq.begin(), dq.end(), w);
-        if(it != dq.end()){
-            cout<<*it<<endl;
-
+        cin>>arr[i];
+        if(m[arr[i]]==0){
+            m[i] = i+1;
         }
-
-
     }
     return 0;
 }
