@@ -22,33 +22,33 @@ void solve()
   ll n;
   cin>>n;
   
-  vector< pair<int ,int> > vp;
-  int a, b;
-  ll i, j;
-  rep(i, n){
-    cin>>a>>b;
-    vp.push_back(make_pair(a,b));
+  vector< pair<int ,int> > v;
+  for(int i=0;i<n;i++){
+      int a,b;
+      cin>>a>>b;
+      v.push_back(make_pair(a,b));
   }
-  
+
   int ans[n] = {0};
 
-  rep(i, n){
-    // find vp->second == vp[i]->first
-    for(j=0; i<n; j++){
-      if(i==j) continue;
-      if(vp[j].second == vp[i].first){
+  for(int i=0;i<n;i++){ 
+    for(int j=0; i<n; j++){
+      if(i==j){
+          continue;
+      } 
+      if(v[j].second == v[i].first){
         ans[i] = 1;
         break;
       }
     }
   }
-  ll z=0;
-  rep(i, n){
+  int cnt = 0;
+  for(int i=0;i<n;i++){
     if(ans[i] == 0){
-      z++;
+      cnt++;
     }
   }
-  cout<<z<<'\n';
+  cout<<cnt<<'\n';
 }
   
 int main()
