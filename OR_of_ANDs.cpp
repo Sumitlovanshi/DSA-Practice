@@ -4,7 +4,7 @@ author : Instinct
 #include <bits/stdc++.h>
 using namespace std;
   
-#define ll long long 
+#define ll long long int
 #define ull unsigned long long
 #define fast_io ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
   
@@ -16,34 +16,39 @@ using namespace std;
 // #define for(i,n) for (i = 0; i < n; i++) 
 // #define for(i,a,n) for (i = a; i <= n; i++)
 // #define for(i,n,a) for (i = n; i >= a; i--) 
-  
+
+ bool isperfectSquare(ll n){
+  if(n==1) return false;
+  double temp = pow(n, 0.5);
+
+  return (ceil(temp)==floor(temp));
+} 
   
 void solve()
 {
-    int n,m;
-    cin>>n>>m;
+    int n;
+    cin>>n;
     int arr[n];
-    set<int> s;
     for(int i=0;i<n;i++){
         cin>>arr[i];
+        arr[i] *= arr[i];
     }
-    int max=0;
-    for(int i=0;i<n-m;i++){
-        int x = m-1;
-        for(int j=i;;j++){
-            if(x==0){
-                break;
-            }
-            else{
-                s.insert(arr[j]);
-                x--;
-            }
-        }
-        if(max < s.size()){
-            max = s.size();
+    int flag=0;
+    for(int i=0;i<n;i++){
+        int x = isperfectSquare(arr[i]);
+        if(x==0){
+            flag =1;
+            break;
         }
     }
-    cout<<max;
+    if(flag){
+        cout<<"yes"<<endl;
+    }
+    else{
+        cout<<"no"<<endl;
+    }
+
+
 }
   
 int main()
@@ -51,7 +56,11 @@ int main()
   
      //fast_io;
   
-     solve();
-  
+     ull t;
+     cin>>t;
+     while(t--)
+     {
+         solve();
+     }
      return 0;
 }
