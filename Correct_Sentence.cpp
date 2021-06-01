@@ -20,47 +20,40 @@ using namespace std;
   
 void solve()
 {
-    int n, k ;
-    int f;
-    cin>>n>>k>>f;
-    vector<  pair<int , int > > v;
-    int a, b;
+    int n;
+    cin>>n;
+    string arr[n];
     for(int i=0;i<n;i++){
-        cin>>a>>b;
-        v.push_back(make_pair(a ,b));
+        cin>>arr[i];
     }
-    set<int> st;
+    int flag = 0;
     for(int i=0;i<n;i++)
     {
-        for(int i=v[i].first;i<v[i].second;i++){
-            st.insert(i);
+        string s = arr[i];
+        int m = s.size();
+        // cout<<m<<endl;
+        int ok = 0 , no = 0 ;
+        for(int j=0;j<m;j++)
+        {
+            if(s[j] >= 97 && s[j] < 110 ){
+                ok++;
+            }
+            else if( s[j] >= 78 && s[j] < 91)
+            {
+                no++;
+            }
         }
+        if( ok == m || no == m){
+            flag++;
+        }
+        
     }
-    int q = st.size();
-    if( f-q > k ){
+    if(flag == n){
         cout<<"yes"<<endl;
     }
     else{
         cout<<"no"<<endl;
     }
-    // map <int , int > mp;
-    // for(int i=0;i<n;i++){
-    //     for(int i=v[i].first;i<v[i].second;i++){
-    //         mp[i]++;
-    //     }
-    // }
-    // int flag = 0;
-    // // for(int i=0;i<f;i++){
-    // //     if(mp[i] == 0){
-    // //         flag++;
-    // //     }
-    // // }
-    // if(flag > k){
-    //     cout<<"yes"<<endl;
-    // }
-    // else{
-    //     cout<<"no"<<endl;
-    // }
 }
   
 int main()
