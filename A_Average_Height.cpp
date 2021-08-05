@@ -43,7 +43,7 @@ void solve()
 int main()
 {
   
-     //fast_io;
+     fast_io;
   
      ull t;
      cin>>t;
