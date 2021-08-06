@@ -20,7 +20,7 @@ using namespace std;
   
 void solve()
 {
-  //fastio
+ 
     int n,m;
     cin>>n>>m;
     int arr[n];
