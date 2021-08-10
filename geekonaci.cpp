@@ -20,13 +20,13 @@ int main(){
 		cin>>a>>b>>c>>n;
 		cout<<geekonaci(a,b,c,n)<<endl;
 
-//		int n;
-//		cin>>n;
-//		int arr[n];
-//		for(int i=0;i<n;i++){
-//			cin>>arr[i];
-//		}
-	}
+// //		int n;
+// //		cin>>n;
+// //		int arr[n];
+// //		for(int i=0;i<n;i++){
+// //			cin>>arr[i];
+// //		}
+// 	}
 	return 0;
 }
 
