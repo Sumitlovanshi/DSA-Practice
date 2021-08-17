@@ -1,6 +1,6 @@
 /*
-author : Mr Rupesh Garhwal
-id: rg_rupeee
+author : Sumit lovanshi
+id: instinct
 */
 #include <bits/stdc++.h>
 using namespace std;
