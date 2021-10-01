@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 
-#define along long int(x) x.begin(),x.end()
+// #define along long int(x) x.begin(),x.end()
 using namespace std;
 
 long long int pw( long long int a, long long int b ) {
@@ -21,6 +21,7 @@ long long int pw( long long int a, long long int b ) {
 }
 
 int main() {
+//     fastio
     int t; 
     cin >>t ;
     while(t--){

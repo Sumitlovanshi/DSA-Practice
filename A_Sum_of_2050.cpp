@@ -1,6 +1,3 @@
-/*
-author : Instinct 
-*/
 #include <bits/stdc++.h>
 using namespace std;
   
@@ -29,9 +26,6 @@ void solve()
   
 int main()
 {
-  
-     //fast_io;
-  
      ull t;
      cin>>t;
      while(t--)

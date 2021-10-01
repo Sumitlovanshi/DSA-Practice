@@ -60,3 +60,22 @@ int main()
   
      return 0;
 }
+
+
+
+// void solve()
+// {
+//     int a,b,c;
+//     cin>>a>>b>>c;
+//     bool flag = false;
+//     int n = countDigit(a);
+//     // ll p = pow(10,n);
+//     ll p = 10;
+//     a = a*p;
+//     for(int i=0;i<=9;i++){
+//         if(((a+i)%b)==0){
+//             a = a+i;
+//             flag = true;
+//             break;
+//         }
+//     }

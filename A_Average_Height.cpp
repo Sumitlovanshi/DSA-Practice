@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include<iostream>
 using namespace std;
   
 #define ll long long 
@@ -43,7 +44,7 @@ void solve()
 int main()
 {
   
-     //fast_io;
+     fast_io;
   
      ull t;
      cin>>t;

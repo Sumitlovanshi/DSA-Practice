@@ -1,4 +1,5 @@
 #include<iostream> 
+#include<iostream>
 using namespace std;
 int mutex = 1, full = 0, empty = 3, x = 0; int main()
 { printf("\n\t***** Sumit Lovanshi*******\n");

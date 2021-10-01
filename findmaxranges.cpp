@@ -27,12 +27,7 @@ int main(){
 			}
 			g--;
 			cout<<j<<" "<<g<<endl;
-//			v.insert(make_pair(j,g));
-		}
-//		int m = v.size();
-//		for(int i=0;i<m;i++){
-//			cout<<v[i]first<<" "<<v[i]->second<<endl
-//		}
+
 	}
 	return 0;
 }
