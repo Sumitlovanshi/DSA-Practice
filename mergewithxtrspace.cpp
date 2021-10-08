@@ -13,17 +13,23 @@ using namespace std;
 #define MOD 1e9+7
 #define LINF 1e18
   
-#define rep(i,n) for (i = 0; i < n; i++) 
-#define repa(i,a,n) for (i = a; i <= n; i++)
-#define repn(i,n,a) for (i = n; i >= a; i--) 
+#define rep(i,n) for (int i = 0; i < n; i++) 
+#define repa(i,a,n) for (int i = a; i <= n; i++)
+#define repn(i,n,a) for (int i = n; i >= a; i--) 
   
   
 void solve()
 {
-    int n;
-    // cin>>n;
-    // cout<<n<<" ";
-    cout<<"hello"<<endl;
+    int n,m;
+    cin>>n>>m;
+    int a[n] , b[m];
+    rep(i ,n) cin>>a[i];
+    rep(i ,m) cin>>b[i];
+
+    // Two pointer  i =n-1 for a and j=0 for b, swap if a of i< b of j, then sort both array
+    // code this next time
+
+
 }
   
 int main()

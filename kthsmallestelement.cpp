@@ -20,25 +20,14 @@ using namespace std;
   
 void solve()
 {
-    vector<int> v = {1 , 2, 3, 4, 5};
-
-     for(int x : v){
-         cout<<x<<", ";
-    }
-     cout<<"after"<<endl;
-    //first is to take 1 more array
-    //second is 2 pointer approach
-
-    int i =0, j = v.size()-1;
-    while(i < j){
-         int temp = v[i];
-         v[i++]=v[j];
-         v[j--] = temp;
-
-    }
-    for(int x : v){
-         cout<<x<<", ";
-    }
+    //sort
+    //using heap (min/max)
+    //
+    vector<int> v{7, 10, 4, 20, 15};
+    int k;
+    cin>>k;
+    sort(v.begin(), v.end());
+    cout<< "-->" <<v[k-1]<< "<--" <<endl;
 }
   
 int main()

@@ -20,24 +20,21 @@ using namespace std;
   
 void solve()
 {
-    vector<int> v = {1 , 2, 3, 4, 5};
-
-     for(int x : v){
-         cout<<x<<", ";
+    //sort
+    //count freq
+    //dutch national flag problem
+    vector<int> v{0, 2, 1, 2, 0, 1, 2, 0, 0, 1, 2};
+    int a =0, b = 11;
+    for(int i=0;i<11;i++){
+        if(v[i] == 0){
+            swap(v[i] , v[a++]);
+        }
+        else if(v[i] == 2 && i<b){
+            swap(v[i] , v[b--]);
+        }
     }
-     cout<<"after"<<endl;
-    //first is to take 1 more array
-    //second is 2 pointer approach
-
-    int i =0, j = v.size()-1;
-    while(i < j){
-         int temp = v[i];
-         v[i++]=v[j];
-         v[j--] = temp;
-
-    }
-    for(int x : v){
-         cout<<x<<", ";
+    for(int i=0;i<11;i++){
+        cout<<v[i]<<endl;
     }
 }
   
